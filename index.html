@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Solar | Ingeniería en Energía</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      max-width: 180px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      padding: 14px 36px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <!-- Reemplaza el video por uno tuyo -->
+    <video autoplay muted loop>
+      <source src="video-solar.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+      <!-- Reemplaza logo.png por tu logo -->
+      <img src="logo.png" class="logo" alt="Sistema Solar">
+
+      <h1>INGENIERÍA SOLAR</h1>
+      <p>Energía fotovoltaica • Diseño • Instalación • Puesta en marcha</p>
+
+      <a class="button" href="mailto:contacto@sistemasolar.co">
+        Contacto
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
