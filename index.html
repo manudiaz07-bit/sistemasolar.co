@@ -14,10 +14,10 @@
     }
 
     body, html {
-      height: 100%;
-      overflow: hidden;
-    }
-
+  height: 100%;
+  overflow: hidden;
+  background-color: #0f0f0f; /* negro técnico */
+}
     .hero {
       position: relative;
       height: 100vh;
@@ -35,10 +35,9 @@
     }
 
     .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
+  display: none;
+}
+
 
     .content {
       position: relative;
@@ -53,10 +52,14 @@
       padding: 20px;
     }
 
-    .logo {
-      max-width: 180px;
-      margin-bottom: 25px;
-    }
+   .logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  max-width: 160px;
+  height: auto;
+}
+
 
     h1 {
       font-size: 2.5rem;
