@@ -189,16 +189,20 @@
     // Fade out intro
     intro.style.animation = 'fadeOut 1s ease forwards';
 
-    setTimeout(() => {
-      intro.style.display = 'none';
+   setTimeout(() => {
+  intro.style.display = 'none';
 
-      // Mostrar contenido con fade-in
-      main.style.display = 'block';
-      const brand = document.getElementById('brandText');
-      brand.style.animation = 'fadeIn 1s ease forwards';
+  // Mostrar contenido con fade-in
+  main.style.display = 'block';
+  main.style.opacity = '1'; // 👈 CLAVE
 
+  const brand = document.getElementById('brandText');
+  if (brand) {
+    brand.style.animation = 'fadeIn 1s ease forwards';
+  }
 
-    }, 1000);
+}, 1000);
+
 
   }, 3000);
 </script>
