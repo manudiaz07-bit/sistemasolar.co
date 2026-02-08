@@ -14,13 +14,12 @@
     }
 
    body, html {
-  height: 100%;
-  overflow: hidden;
- background: radial-gradient(
-  circle at top,
-  #121212 0%,
-  #0b0b0b 60%
-);
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #0b0b0b;
+}
+;
 
 }
 
@@ -32,11 +31,12 @@
 
     .content {
   width: 100%;
-  padding-top: 220px; /* deja espacio al título grande */
+  padding-top: 260px; /* espacio real para el título grande */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 
    .logo {
