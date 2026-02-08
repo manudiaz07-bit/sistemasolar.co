@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sistema Solar | Soluciones Eficientes de Energía</title>
+  <title>Sistema Solar | Soluciones de Energía Eficientes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,202 +10,157 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
-   body, html {
-  min-height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #0b0b0b;
-}
-;
-
-}
-
-   
-      .overlay {
-  display: none;
-}
-
-
-    .content {
-  width: 100%;
-  padding-top: 260px; /* espacio real para el título grande */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-   .logo {
-  position: absolute;
-  top: 25px;
-  left: 30px;
-  max-width: 160px;
-  height: auto;
-}
-
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      opacity: 0.85;
-      margin-bottom: 30px;
-    }
-
-    a.button {
-      padding: 14px 36px;
-      border: 1px solid #fff;
+    body {
+      background: #0b0b0b;
       color: #fff;
-      text-decoration: none;
+      overflow-x: hidden;
+    }
+
+    /* LOGO */
+    .logo {
+      position: fixed;
+      top: 24px;
+      left: 30px;
+      max-width: 140px;
+      z-index: 10;
+    }
+
+    /* INTRO */
+    .intro {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      font-weight: 300;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.85rem;
-      transition: all 0.3s ease;
+      animation: fadeIn 1.2s ease forwards;
     }
 
-    a.button:hover {
-      background: #fff;
-      color: #000;
+    /* MAIN CONTENT (oculto al inicio) */
+    .main {
+      display: none;
+      padding: 160px 60px 80px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
-    .whatsapp-icon {
-  display: inline-block;
-  margin-top: 30px;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-.whatsapp-icon img {
-  width: 42px;
-  height: auto;
-}
-
-.whatsapp-icon:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
-    
-.top-message {
-  margin-top: 50px;
-  margin-bottom: 80px;
-  font-size: 2.3rem;
-  letter-spacing: 4px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
-}
-
-
-
+    .header-text {
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 80px;
+    }
 
     .services {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px;
-  padding: 0 60px;
-}
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
 
-.service-box {
-  transition: 
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-    position: relative;
-}
+    .service-box {
+      width: 420px;
+      height: 240px;
+      background: #111;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-.service-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-}
+    .service-box video,
+    .service-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.service-box video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    /* WHATSAPP */
+    .whatsapp {
+      display: block;
+      text-align: center;
+    }
 
-.service-box:hover video,
-.service-box:hover img {
-  transform: scale(1.04);
-}
+    .whatsapp img {
+      width: 44px;
+      transition: transform 0.3s ease;
+    }
 
+    .whatsapp img:hover {
+      transform: scale(1.1);
+    }
 
-    /* ANIMACIONES BASE */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    /* ANIMACIONES */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-/* TEXTO SUPERIOR */
-.top-message {
-  animation: fadeUp 0.8s ease-out forwards;
-}
-
-/* BLOQUES DE SERVICIOS */
-.service-box {
-  animation: fadeUp 0.9s ease-out forwards;
-  animation-delay: 0.2s;
-}
-
-    
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
   </style>
 </head>
 
 <body>
 
-    <div class="overlay"></div>
+  <!-- LOGO -->
+  <img src="logo-sistema-solar-transparente.png" class="logo" alt="Sistema Solar">
 
-    <div class="content">
-      <!-- Reemplaza logo.png por tu logo -->
-      <img src="logo-sistema-solar-negro-clear.png" class="logo" alt="Sistema Solar">
-      <div class="top-message">
-  SOLUCIONES DE ENERGÍA EFICIENTES
-</div>
-
-      <div class="services">
-  
-  <div class="service-box">
-    <video autoplay muted loop playsinline>
-      <source src="Video-Casa-Perdomo.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div class="service-box">
-    <img src="logo-sistema-solar.jpg" alt="Soluciones de energía eficiente">
-  </div>
-
-</div>
-
-<a href="https://api.whatsapp.com/send/?phone=3116608021&text&type=phone_number&app_absent=0"
-   class="whatsapp-icon"
-   target="_blank"
-   rel="noopener"
-   aria-label="WhatsApp Sistema Solar">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-     
+  <!-- INTRO -->
+  <div class="intro" id="intro">
+    <div class="intro-text">
+      SOLUCIONES DE ENERGÍA EFICIENTES
     </div>
-  </section>
+  </div>
+
+  <!-- CONTENIDO REAL -->
+  <div class="main" id="main">
+    <div class="header-text">
+      Soluciones de energía eficientes
+    </div>
+
+    <div class="services">
+      <div class="service-box">
+        <video autoplay muted loop playsinline>
+          <source src="Video-Casa-Perdomo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="service-box">
+        <img src="servicio-industrial.jpg" alt="Soluciones industriales">
+      </div>
+    </div>
+
+    <a class="whatsapp"
+       href="https://api.whatsapp.com/send/?phone=3116608021"
+       target="_blank"
+       rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script>
+    setTimeout(() => {
+      document.getElementById('intro').style.animation = 'fadeOut 1s forwards';
+
+      setTimeout(() => {
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('main').style.display = 'block';
+      }, 1000);
+
+    }, 3000);
+  </script>
 
 </body>
 </html>
