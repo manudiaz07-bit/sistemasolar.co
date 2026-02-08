@@ -53,7 +53,7 @@
       padding: 50px 60px 80px; /* antes 160px */
       max-width: 1400px;
       margin: 0 auto;
-      animation: fadeIn 1s ease forwards;
+      animation: fadeIn 1.2s ease forwards;
     }
 
 
@@ -94,7 +94,7 @@
       gap: 40px;
       justify-content: center;
       align-items: flex-start;
-      margin-top: 260px;   /* empuja las cajas debajo del header fijo */
+      margin-top: 220px;   /* empuja las cajas debajo del header fijo */
       margin-bottom: 80px;
     }
 
@@ -187,7 +187,7 @@
     const main = document.getElementById('main');
 
     // Fade out intro
-    intro.style.animation = 'fadeOut 1s ease forwards';
+    intro.style.animation = 'fadeOut 1.2s ease forwards';
 
    setTimeout(() => {
   intro.style.display = 'none';
@@ -198,7 +198,7 @@
 
   const brand = document.getElementById('brandText');
   if (brand) {
-    brand.style.animation = 'fadeIn 1s ease forwards';
+    brand.style.animation = 'fadeIn 1.2s ease forwards';
   }
 
 }, 1000);
