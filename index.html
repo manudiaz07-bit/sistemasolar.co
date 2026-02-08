@@ -60,7 +60,8 @@
     .brand-text {
       position: fixed;
       top: 48px;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
       text-align: center;
       font-size: 2.3rem;
@@ -70,7 +71,9 @@
       color: #ffffff;
       z-index: 9;
       pointer-events: none;
+      opacity: 0; /* 🔑 CLAVE */
     }
+
 
 
 
@@ -146,7 +149,7 @@
 
   <!-- INTRO -->
   <div class="intro" id="intro">
-    <div class="brand-text">
+    <div class="intro-text">
       SOLUCIONES DE ENERGÍA EFICIENTES
     </div>
   </div>
@@ -191,6 +194,9 @@
 
       // Mostrar contenido con fade-in
       main.style.display = 'block';
+      const brand = document.getElementById('brandText');
+      brand.style.animation = 'fadeIn 1s ease forwards';
+
 
     }, 1000);
 
