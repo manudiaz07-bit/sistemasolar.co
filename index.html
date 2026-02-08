@@ -153,16 +153,24 @@
 
   <!-- JS -->
   <script>
+  setTimeout(() => {
+    const intro = document.getElementById('intro');
+    const main = document.getElementById('main');
+
+    // Fade out intro
+    intro.style.animation = 'fadeOut 1s ease forwards';
+
     setTimeout(() => {
-      document.getElementById('intro').style.animation = 'fadeOut 1s forwards';
+      intro.style.display = 'none';
 
-      setTimeout(() => {
-        document.getElementById('intro').style.display = 'none';
-        document.getElementById('main').style.display = 'block';
-      }, 1000);
+      // Mostrar contenido con fade-in
+      main.style.display = 'block';
 
-    }, 3000);
-  </script>
+    }, 1000);
+
+  }, 3000);
+</script>
+
 
 </body>
 </html>
