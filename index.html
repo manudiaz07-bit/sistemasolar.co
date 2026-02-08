@@ -58,6 +58,9 @@
 
 
     .brand-text {
+      position: fixed;
+      top: 48px;
+      left: 0;
       width: 100%;
       text-align: center;
       font-size: 2.3rem;
@@ -65,7 +68,10 @@
       font-weight: 300;
       text-transform: uppercase;
       color: #ffffff;
+      z-index: 9;
+      pointer-events: none;
     }
+
 
 
     .brand-header {
@@ -80,12 +86,15 @@
     }
 
     
-    .services {
+   .services {
       display: flex;
       gap: 40px;
       justify-content: center;
+      align-items: flex-start;
+      margin-top: 260px;   /* empuja las cajas debajo del header fijo */
       margin-bottom: 80px;
     }
+
 
     .service-box {
       width: 420px;
