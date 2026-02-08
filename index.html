@@ -132,6 +132,29 @@
   position: relative;
 }
 
+    /* ANIMACIONES BASE */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TEXTO SUPERIOR */
+.top-message {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* BLOQUES DE SERVICIOS */
+.service-box {
+  animation: fadeUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
     
   </style>
 </head>
