@@ -74,9 +74,6 @@
       opacity: 0; /* 🔑 CLAVE */
     }
 
-
-
-
     .brand-header {
       width: 100%;
       text-align: center;
@@ -105,7 +102,30 @@
       background: #111;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
     }
+
+    .service-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      padding: 16px 20px;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.9);
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0)
+  );
+
+  pointer-events: none; /* no clickeable */
+}
 
     .service-box video,
     .service-box img {
@@ -165,14 +185,17 @@
     <video autoplay muted loop playsinline>
       <source src="Video-Casa-Perdomo.mp4" type="video/mp4">
     </video>
+    <div class="service-title">Ahorro energético</div>
   </div>
 
   <div class="service-box">
     <img src="servicio-comercial.jpg" alt="Soluciones comerciales">
+    <div class="service-title">Movilidad eléctrica</div>
   </div>
 
   <div class="service-box">
     <img src="servicio-industrial.jpg" alt="Soluciones industriales">
+    <div class="service-title">Consultoría energética</div>
   </div>
 </div>
 
